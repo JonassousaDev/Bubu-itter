@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    background-color: bisque;
+    height: 100vh;
+}
+
+.logo img {
+    max-width: 450px;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: coral;
+    height: 100vh;
+}
+
+.form .form_field {
+    margin: 20px 0;
+}
+
+.form .form_field input[type="text"],
+.form .form_field input[type="password"] {
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    padding: 0 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.form .form_field input[type="text"]:focus,
+.form .form_field input[type="password"]:focus {
+    outline: none;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.form .button {
+    margin-top: 20px;
+}
+
+.form .button button {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    background-color: gold;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    cursor: pointer;
+}
+
+.form .button button:active {
+    transform: translateY(3px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}

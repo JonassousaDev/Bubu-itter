@@ -3,33 +3,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/style2.css' %}">
+
+    {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> {% endcomment %}
     <title>bubu-itter</title>
-    <style>
-    @media (max-width: 768px) {
-      .form-group {
-        flex-direction: column;
-      }
-    }
-    </style>
+
 </head>
 <body>
     <div class='container'>
-        <div class="mx-auto" style="max-width:600px">
+
+        {% comment %} picture+title {% endcomment %}
+        <div class='logo'>
+            <h1>Bubu-itter</h1>
+            <img src="/media/default.jpg" alt="Bubu-itter">
+        </div>
+        
+        {% comment %} login form {% endcomment %}
+        <div class='form'>
             <form method="POST">
                 {% csrf_token %}
-                <fieldset class="form-group">
-                    <legend class="border-bottom mb-4">Login</legend>
-                    {{form}}
-                </fieldset>
-                <div class="form-group">
-                    <button class="btn btn-outline-info" type="submit">Login</button>
+                
+                <div class= 'form_field'>
+                    {{form.username}}
                 </div>
-                <a href="{% url 'register' %}"><p>Create a new account</p></a>
-            </form>       
+                <div class= 'form_field'>
+                    {{form.password}}
+                </div>
+
+                {% comment %} button {% endcomment %}
+                <div class = 'button'>
+                    <button type="submit">Login</button>
+                </div>
+
+                <a href="{% url 'register' %}" class="register-link"><p>Create a new account</p></a>
+            </form>  
         </div>
-    </div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    </div> 
+</body> 
+{% comment %} <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script> {% endcomment %}
 </html>
