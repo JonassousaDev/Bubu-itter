@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="col-sm-2">
+        <div class="media">
+            <img src="rounded-circle account-img img-fluid " src='{{user.profile.image.url}}'>
+
+        </div>
+
+    </div>
+    <h3>{{user.username}}</h3>
+    <div class="card">
+        <div class="card-body">
+
+            {{user.profile.bio}}
+
+        </div>
+    </div>
+</div>
+
+<a href="{% url 'profileupdate %}"><button class="btn btn-outline-info">Edit Profile</button></a>

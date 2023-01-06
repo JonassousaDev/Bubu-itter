@@ -1,0 +1,38 @@
+{% extends 'feed/base.html' %}
+
+{%block content%}
+
+<div class="jumbotron">
+    <h1 class="display-4">Hi, {{user.username}}</h1>
+    <p class="lead">BUBUBU how you want</p>
+    <hr class="my-4">
+    <p>Click bellow to BuBuBu</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="{% url 'tweetcreate' %}" role="button">Create</a>
+    </p>
+  </div>
+
+
+    <div class='container'>
+    {%for tweet in object_list %}
+
+        <div class="card">
+
+            <div class="card-header">
+                <a href='#'>{{tweet.uname}} </a>
+                <p> {{tweet.datetime}} </p>
+            </div>
+
+            <div class="card-body">
+              <p class="card-text">{{tweet.text}}</p>
+              {% if tweet.uname == user %}
+              <a href="{% url 'tweetupdate' tweet.id %}"><button class="btn btn-outline-info">Update</button></a>
+              <a href="{% url 'tweetdelete' tweet.id %}"><button class="btn btn-outline-danger">Delete</button></a>
+              {% endif %}
+            </div>
+
+        </div>
+    {% endfor %}
+    </div>
+{%endblock content%}
+
