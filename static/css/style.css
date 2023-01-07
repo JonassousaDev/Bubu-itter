@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
-    height: 100vh;
+    height: 100vh; 
+    background-color: #f9d7d7;
+
   }
   
   .logo {
@@ -11,48 +14,120 @@
     flex-direction: column;
     align-items: center;
     margin-right: 20px;
-    background-color: bisque;
-
-  }
-
-  .logo img {
-    max-width: 450px;
+    background-color: #fce6e6; 
+    border-radius: 20px; 
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2); 
+    padding: 20px; 
+    margin-right: 10%; 
   }
   
+  .logo h1 {
+    font-size: 2em; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    letter-spacing: 2px; 
+    color: #f78181; 
+  }
+  
+  .logo img {
+    width: 450px; 
+    height: auto; 
+    border-radius: 50%; 
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3); 
+  }
+
   
   .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 20px;
-    background-color: brown;
-    /* background-color: blueviolet; */
-  }
-  
-  .form_field {
-    margin: 10px 0;
+    background-color: #fce6e6; 
+    border-radius: 20px; 
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2); 
+    padding: 50px;
+    
   }
 
-  .form_field input {
-    font-size: 1.5em;
-    padding: 10px;
+  
+  .form .form_field {
+    margin-bottom: 20px;
+    
   }
   
+  .form .form_field input[type="text"],
+  .form .form_field input[type="email"],
+  .form .form_field input[type="password"] {
+    width: 100%; 
+    height: 50px; 
+    border: none;
+    outline: none; 
+    border-radius: 20px; 
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1); 
+    font-size: 1.2em; 
+    padding: 0 20px; 
+  }
   
-  
-  .button {
+  form label {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block;
+    padding: 0.2em 0;
+    /* color: darkblue; */
+}
+
+
+  .form .button {
+    display: flex; 
+    justify-content: center; 
     margin-top: 20px;
   }
-
-  .logo,
-  .form {
-    flex-grow: 1;
-    flex-shrink: 1;
+  
+  .form .button button {
+    width: 100%; 
+    height: 50px; 
+    border: none; 
+    border-radius: 20px; 
+    background-color: #e6b3b3; 
+    font-size: 1.2em; 
+    font-weight: bold; 
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1); 
+    cursor: pointer; 
+  }
+  
+  .form .button button:hover {
+    background-color: #e69f9f; 
+  }
+  
+  .form .button button:active {
+    background-color: #e68181; 
+    transform: scale(1.1); 
+  }
+  
+  .register-link {
+    color: #ff0000; 
+    font-family: Arial, sans-serif;
   }
 
+  .register-link:hover {
+    color: black; 
+  }
+
+  legend {
+    font-size: 2.5em;
+    text-align: center;
+    padding-bottom:  30px;
+    font-family: 'Rubik Bubbles', cursive;
+    letter-spacing: 2px;
+    color: #665d5d; 
+    
+  }
+
+
   
-@media (max-width: 768px) {
-.form-group {
-    flex-direction: column;
-}
-}
+  @media (max-width: 987px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .logo {
+      margin-bottom: 20px;
+    }
+  }
+  

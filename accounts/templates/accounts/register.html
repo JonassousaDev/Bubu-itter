@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bubu-itter</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static '/css/style2.css' %}">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
 
 </head>
 
@@ -14,14 +14,17 @@
     <div class='container'>
         <form method="POST" class='form'>
             {% csrf_token %}
-            <fieldset class= 'form_field'>
-                <legend>SignUp</legend>
-                {{ form.as_p }}
-            </fieldset>
-            <div>
+            
+                <legend>Sign Up</legend>
+                <div class= 'form_field'>
+                    {{ form.as_p }}
+                </div>
+ 
+            <div class = 'button'>
                 <button type="submit">SignUp</button>
             </div>
-            <a href="{%url 'login' %}"><p>alredy have an account</p></a>
+            <a href="{%url 'login' %}" class="register-link"><p>alredy have an account</p></a>
+            
         </form>
     </div>
 

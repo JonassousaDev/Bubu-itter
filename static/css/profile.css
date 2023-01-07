@@ -1,0 +1,75 @@
+
+.pro_container {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    padding: 35px;
+  }
+  
+  .pro_container > div:first-child {
+  
+      
+  }
+  .pro_container img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .pro_container h3 {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #f78181;
+    margin-bottom: 20px;
+}
+
+.pro_bio {
+    background-color: #e69f9f;
+    width: 60%;
+    padding: 20px;
+    border-radius: 8px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  .pro_bio button {
+    
+    height: 50px; 
+    border: none; 
+    border-radius: 20px; 
+    background-color: #e6b3b3; 
+    font-size: 1.2em; 
+    font-weight: bold; 
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1); 
+    cursor: pointer; 
+  }
+  
+   .pro_bio {
+    position: relative; /* make the container a positioning context */
+  }
+  
+   .pro_container > div:last-child button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; 
+  }
+
+  @media only screen and (max-width: 600px) {
+    .pro_bio {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .pro_container {
+      flex-direction: column;
+    }
+  }
+  
+  
