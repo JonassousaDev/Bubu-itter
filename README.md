@@ -8,11 +8,14 @@ To install bubu-itter, follow these steps:
 
 ### using venv
 python3 -m venv env
+
 source env/bin/activate
 
 ### using poetry
 poetry create bubu-itter
+
 poetry shell
+
 
 
 2.Install Django and Pillow using pip. Pillow is a library for handling images and is required for image uploads in bubu-itter.
