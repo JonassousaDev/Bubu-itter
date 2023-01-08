@@ -1,0 +1,38 @@
+.update_container_feed {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 35px;
+}
+
+  #id_text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em; 
+
+}
+
+
+ .update_container_feed form{
+      background-color: #f9d7d7;
+      width: 60%;
+
+  }
+
+  .update_container_feed button {
+    height: 50px; 
+    border: none; 
+    border-radius: 20px; 
+    /* background-color: #e6b3b3;  */
+    background-color: #f78181; 
+    font-size: 1.2em; 
+    font-weight: bold; 
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1); 
+    cursor: pointer; 
+    bottom: 20px;
+    right: 20px; 
+  }

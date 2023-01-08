@@ -2,15 +2,18 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #fce6e6;
+    /* background-color: #fce6e6; */
 }
 nav {
-    background-color: #f9d7d7;
-    height: 60px;
+    /* background-color: #f9d7d7; */
+    background-color: #e69f9f;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    width: 80%;
+    margin: 16px auto;
   }
   
   nav button {
