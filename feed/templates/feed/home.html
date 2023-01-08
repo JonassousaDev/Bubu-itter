@@ -2,14 +2,12 @@
 
 {%block content%}
 
-<div class="jumbotron">
-    <h1 class="display-4">Hi, {{user.username}}</h1>
-    <p class="lead">BUBUBU how you want</p>
-    <hr class="my-4">
-    <p>Click bellow to BuBuBu</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="{% url 'tweetcreate' %}" role="button">Create</a>
-    </p>
+  <div class='post_feed'>
+      <h1>Hi, {{user.username}}</h1>
+      <p class="subtitle">Bu-Bu-Bu as you want</p>
+      {% comment %} <p>Click bellow to BuBuBu</p> {% endcomment %}
+      <p><a href="{% url 'tweetcreate' %}" role="button">Start your Bu-Bu-BU</a></p>
+      <hr>
   </div>
 
 
@@ -19,15 +17,16 @@
         <div class="card">
 
             <div class="card-header">
+                {% comment %} <img src='{{ user.profile.image.url }}' alt = 'generic placehold image'> {% endcomment %}
                 <a href='#'>{{tweet.uname}} </a>
-                <p> {{tweet.datetime}} </p>
+                <p class='date_time'> {{tweet.datetime}} </p>
             </div>
 
             <div class="card-body">
               <p class="card-text">{{tweet.text}}</p>
               {% if tweet.uname == user %}
-              <a href="{% url 'tweetupdate' tweet.id %}"><button class="btn btn-outline-info">Update</button></a>
-              <a href="{% url 'tweetdelete' tweet.id %}"><button class="btn btn-outline-danger">Delete</button></a>
+              <a href="{% url 'tweetupdate' tweet.id %}"><button class='button'>Update</button></a>
+              <a href="{% url 'tweetdelete' tweet.id %}"><button class='button'>Delete</button></a>
               {% endif %}
             </div>
 

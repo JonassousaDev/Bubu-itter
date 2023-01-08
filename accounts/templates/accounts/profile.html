@@ -2,25 +2,20 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="col-sm-2">
-        <div class="media">
-            <img class="rounded-circle account-img img-fluid " src='{{ user.profile.image.url }}' alt = 'generic placehold image'>
-
-        </div>
-
-    </div>
-    <h3>{{user.username}}</h3>
+<div class="pro_container">
     
-    <a href="{% url 'profileupdate' %}"><button class="btn btn-outline-info">Edit Profile</button></a>
-    <div class="card">
-        <div class="card-body">
-
-            {{user.profile.bio}}
-
-        </div>
+    <div class='prof_cont'>
+        <img src='{{ user.profile.image.url }}' alt = 'generic placehold image'>
+        <h3>{{user.username}}</h3>
     </div>
+
+    <div class='pro_bio'>
+        {{user.profile.bio}}
+        <a href="{% url 'profileupdate' %}"><button>Edit Profile</button></a>
+    </div>
+
 </div>
+
 
 
 {% endblock content %}
