@@ -1,7 +1,7 @@
-#bubu-itter
+# bubu-itter
 bubu-itter is a social media platform built using Django.
 
-#Installation
+## installation
 To install bubu-itter, follow these steps:
 
 1.Create a virtual environment for your project using virtualenv or conda. This will allow you to isolate the dependencies of your project from other packages on your system.
